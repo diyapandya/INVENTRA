@@ -1,0 +1,67 @@
+/* Navbar Component Styles */
+.navbar-container {
+  height: 60px;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #1e293b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #60a5fa;
+}
+
+.navbar-brand-icon {
+  font-size: 22px;
+  color: #3b82f6;
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.navbar-user-icon {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.navbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.navbar-logout-btn:hover {
+  background-color: #b91c1c;
+}

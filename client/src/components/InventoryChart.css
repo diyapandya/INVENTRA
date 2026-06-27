@@ -1,0 +1,60 @@
+/* InventoryChart Component Styles */
+.chart-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  flex: 2;
+  min-width: 300px;
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chart-title-icon {
+  font-size: 16px;
+  color: #3b82f6;
+}
+
+.chart-title {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chart-area {
+  display: flex;
+  justify-content: center;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.chart-bar {
+  fill: #3b82f6;
+  transition: fill 0.2s ease;
+}
+
+.chart-bar:hover {
+  fill: #2563eb;
+}
+
+.chart-label-value {
+  fill: #94a3b8;
+  font-size: 9px;
+  font-family: inherit;
+}
+
+.chart-label-axis {
+  fill: #475569;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: inherit;
+}
