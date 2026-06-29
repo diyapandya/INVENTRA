@@ -1,0 +1,235 @@
+.inventory-manager-page {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.inventory-manager-layout {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.inventory-manager-main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.inventory-manager-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.inventory-manager-header h1 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.inventory-manager-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.inventory-manager-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inventory-manager-kpi {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.inventory-manager-kpi__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.inventory-manager-kpi__icon.green {
+  background: #16a34a;
+}
+
+.inventory-manager-kpi__icon.blue {
+  background: #2563eb;
+}
+
+.inventory-manager-kpi__icon.amber {
+  background: #d97706;
+}
+
+.inventory-manager-kpi__icon.red {
+  background: #dc2626;
+}
+
+.inventory-manager-kpi__icon.purple {
+  background: #7c3aed;
+}
+
+.inventory-manager-kpi__icon.teal {
+  background: #0d9488;
+}
+
+.inventory-manager-kpi h2 {
+  margin: 0 0 6px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.inventory-manager-kpi p {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.inventory-manager-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inventory-manager-panel,
+.inventory-manager-table-card,
+.inventory-manager-responsibilities {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.inventory-manager-panel {
+  padding: 18px;
+}
+
+.inventory-manager-panel h2,
+.inventory-manager-table-card h2,
+.inventory-manager-responsibilities h2 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inventory-manager-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  color: #64748b;
+  background:
+    linear-gradient(90deg, rgba(15, 118, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(15, 118, 110, 0.08) 1px, transparent 1px),
+    #f8fafc;
+  background-size: 28px 28px;
+  border: 1px dashed #99f6e4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.inventory-manager-tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inventory-manager-table-card,
+.inventory-manager-responsibilities {
+  padding: 18px;
+}
+
+.inventory-manager-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-manager-table th,
+.inventory-manager-table td {
+  padding: 11px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+
+.inventory-manager-table th {
+  color: #64748b;
+  background-color: #f8fafc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.inventory-manager-table td {
+  color: #1e293b;
+}
+
+.inventory-manager-responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.inventory-manager-responsibility {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: #14532d;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .inventory-manager-layout {
+    flex-direction: column;
+  }
+
+  .inventory-manager-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .inventory-manager-tables {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .inventory-manager-main {
+    padding: 16px;
+  }
+
+  .inventory-manager-header h1 {
+    font-size: 22px;
+  }
+}

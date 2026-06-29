@@ -17,6 +17,16 @@ import Invoices from "./pages/SalesManager/Invoices";
 import Revenue from "./pages/SalesManager/Revenue";
 import Reports from "./pages/SalesManager/Reports";
 import Profile from "./pages/SalesManager/Profile";
+import InventoryManagerDashboard from "./pages/InventoryManager/Dashboard";
+import InventoryManagerProducts from "./pages/InventoryManager/Products";
+import InventoryManagerCategories from "./pages/InventoryManager/Categories";
+import InventoryManagerBrands from "./pages/InventoryManager/Brands";
+import InventoryManagerInventory from "./pages/InventoryManager/Inventory";
+import InventoryManagerStockMovement from "./pages/InventoryManager/StockMovement";
+import InventoryManagerSuppliers from "./pages/InventoryManager/Suppliers";
+import InventoryManagerPurchaseOrders from "./pages/InventoryManager/PurchaseOrders";
+import InventoryManagerReports from "./pages/InventoryManager/Reports";
+import InventoryManagerProfile from "./pages/InventoryManager/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoleRoute from "./components/RoleRoute";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
@@ -88,7 +98,79 @@ function AppRoutes() {
         path="/dashboard/inventory"
         element={
           <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
-            <Dashboard role="Inventory Manager" />
+            <InventoryManagerDashboard />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/products"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerProducts />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/categories"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerCategories />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/brands"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerBrands />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/inventory"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerInventory />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/stock-movement"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerStockMovement />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/suppliers"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerSuppliers />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/purchase-orders"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerPurchaseOrders />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/reports"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerReports />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/inventory-manager/profile"
+        element={
+          <RoleRoute allowedRoles={["Inventory Manager", "Administrator"]}>
+            <InventoryManagerProfile />
           </RoleRoute>
         }
       />
