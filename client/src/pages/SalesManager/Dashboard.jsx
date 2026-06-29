@@ -97,6 +97,16 @@ function SalesManagerDashboard() {
     { name: "USB Hub", sold: 145, revenue: 1450 },
   ]);
 
+  const accessScope = [
+    "Manage Orders",
+    "Manage Customers",
+    "Create Invoices",
+    "Use Sales Reports",
+    "Read Products, Categories, Suppliers & Inventory",
+    "View Forecasting",
+    "Use Limited Analytics",
+  ];
+
   return (
     <div className="sales-dashboard-container">
       <Navbar />
@@ -326,6 +336,18 @@ function SalesManagerDashboard() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </section>
+
+          <section className="sales-access-section">
+            <h2>Access Scope</h2>
+            <div className="sales-access-grid">
+              {accessScope.map((item) => (
+                <div className="sales-access-item" key={item}>
+                  <FaClipboardList />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </section>
         </main>

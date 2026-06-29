@@ -63,6 +63,10 @@ const responsibilities = [
   "Monitor Stock Levels",
   "Manage Suppliers",
   "Track Inventory Activities",
+  "Manage Purchase Orders",
+  "Read Orders & Customers",
+  "View Forecasting",
+  "Use Limited Analytics",
 ];
 
 function Dashboard() {

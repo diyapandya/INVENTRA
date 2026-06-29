@@ -5,13 +5,16 @@ import {
   FaBoxes,
   FaBuilding,
   FaChartLine,
+  FaChartPie,
   FaClipboardList,
   FaExchangeAlt,
   FaFileAlt,
   FaShoppingBag,
+  FaShoppingCart,
   FaTags,
   FaTruck,
   FaUser,
+  FaUsers,
   FaWarehouse,
 } from "react-icons/fa";
 import "./Sidebar.css";
@@ -45,7 +48,27 @@ const menuItems = [
     path: "/inventory-manager/purchase-orders",
     icon: <FaShoppingBag />,
   },
+  {
+    name: "Orders",
+    path: "/inventory-manager/orders",
+    icon: <FaShoppingCart />,
+  },
+  {
+    name: "Customers",
+    path: "/inventory-manager/customers",
+    icon: <FaUsers />,
+  },
   { name: "Reports", path: "/inventory-manager/reports", icon: <FaFileAlt /> },
+  {
+    name: "Analytics",
+    path: "/inventory-manager/analytics",
+    icon: <FaChartPie />,
+  },
+  {
+    name: "Forecasting",
+    path: "/inventory-manager/forecasting",
+    icon: <FaClipboardList />,
+  },
   { name: "Profile", path: "/inventory-manager/profile", icon: <FaUser /> },
 ];
 

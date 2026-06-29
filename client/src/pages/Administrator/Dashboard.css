@@ -1,0 +1,212 @@
+.administrator-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.administrator-layout {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.administrator-main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.administrator-header {
+  margin-bottom: 24px;
+}
+
+.administrator-header h1 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.administrator-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.administrator-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.administrator-kpi {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.administrator-kpi__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.administrator-kpi__icon.blue { background: #2563eb; }
+.administrator-kpi__icon.green { background: #16a34a; }
+.administrator-kpi__icon.teal { background: #0d9488; }
+.administrator-kpi__icon.purple { background: #7c3aed; }
+.administrator-kpi__icon.amber { background: #d97706; }
+.administrator-kpi__icon.red { background: #dc2626; }
+
+.administrator-kpi h2 {
+  margin: 0 0 6px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.administrator-kpi p {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.administrator-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.administrator-panel,
+.administrator-table-card,
+.administrator-responsibilities {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.administrator-panel,
+.administrator-table-card,
+.administrator-responsibilities {
+  padding: 18px;
+}
+
+.administrator-panel h2,
+.administrator-table-card h2,
+.administrator-responsibilities h2 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.administrator-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  color: #64748b;
+  background:
+    linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px),
+    #f8fafc;
+  background-size: 28px 28px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.administrator-tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.administrator-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.administrator-table th,
+.administrator-table td {
+  padding: 11px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+
+.administrator-table th {
+  color: #64748b;
+  background: #f8fafc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.administrator-table td {
+  color: #1e293b;
+}
+
+.administrator-responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.administrator-responsibility {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: #713f12;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .administrator-layout {
+    flex-direction: column;
+  }
+
+  .administrator-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .administrator-tables {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .administrator-main {
+    padding: 16px;
+  }
+
+  .administrator-header h1 {
+    font-size: 22px;
+  }
+}
