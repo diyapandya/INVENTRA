@@ -8,6 +8,15 @@ import SalesManagement from "./pages/SalesManagement";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import SalesManagerDashboard from "./pages/SalesManager/Dashboard";
+import Orders from "./pages/SalesManager/Orders";
+import Customers from "./pages/SalesManager/Customers";
+import Invoices from "./pages/SalesManager/Invoices";
+import Revenue from "./pages/SalesManager/Revenue";
+import Reports from "./pages/SalesManager/Reports";
+import Profile from "./pages/SalesManager/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoleRoute from "./components/RoleRoute";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
@@ -54,6 +63,18 @@ function AppRoutes() {
         path="/register"
         element={isAuthenticated ? <Navigate to="/" replace /> : <Register />}
       />
+      <Route
+        path="/forgot-password"
+        element={
+          isAuthenticated ? <Navigate to="/" replace /> : <ForgotPassword />
+        }
+      />
+      <Route
+        path="/reset-password"
+        element={
+          isAuthenticated ? <Navigate to="/" replace /> : <ResetPassword />
+        }
+      />
 
       <Route
         path="/dashboard/admin"
@@ -75,7 +96,55 @@ function AppRoutes() {
         path="/dashboard/sales"
         element={
           <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
-            <Dashboard role="Sales Manager" />
+            <SalesManagerDashboard />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/orders"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Orders />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/customers"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Customers />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/invoices"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Invoices />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/revenue"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Revenue />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/reports"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Reports />
+          </RoleRoute>
+        }
+      />
+      <Route
+        path="/sales-manager/profile"
+        element={
+          <RoleRoute allowedRoles={["Sales Manager", "Administrator"]}>
+            <Profile />
           </RoleRoute>
         }
       />

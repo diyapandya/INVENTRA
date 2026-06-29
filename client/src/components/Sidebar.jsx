@@ -6,6 +6,10 @@ import {
   FaTruck,
   FaDollarSign,
   FaUsers,
+  FaShoppingCart,
+  FaFileInvoice,
+  FaUser,
+  FaFileAlt,
 } from "react-icons/fa";
 import "./Sidebar.css";
 
@@ -32,6 +36,19 @@ function Sidebar() {
     { name: "Sales", path: "/sales", icon: <FaDollarSign /> },
   ];
 
+  const salesManagerItems = [
+    { name: "Orders", path: "/sales-manager/orders", icon: <FaShoppingCart /> },
+    { name: "Customers", path: "/sales-manager/customers", icon: <FaUsers /> },
+    {
+      name: "Invoices",
+      path: "/sales-manager/invoices",
+      icon: <FaFileInvoice />,
+    },
+    { name: "Revenue", path: "/sales-manager/revenue", icon: <FaDollarSign /> },
+    { name: "Reports", path: "/sales-manager/reports", icon: <FaFileAlt /> },
+    { name: "Profile", path: "/sales-manager/profile", icon: <FaUser /> },
+  ];
+
   const adminItems = [
     { name: "Users", path: "/users", icon: <FaUsers /> },
     { name: "Reports", path: "/dashboard/admin", icon: <FaChartLine /> },
@@ -43,8 +60,12 @@ function Sidebar() {
     menuItems.push(...inventoryItems);
   }
 
-  if (user && ["Administrator", "Sales Manager"].includes(user.role)) {
-    menuItems.push(...salesItems);
+  if (
+    user &&
+    ["Administrator", "Sales Manager"].includes(user.role) &&
+    user.role === "Sales Manager"
+  ) {
+    menuItems.push(...salesManagerItems);
   }
 
   if (user && user.role === "Administrator") {

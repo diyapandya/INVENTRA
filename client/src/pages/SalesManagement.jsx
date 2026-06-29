@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import Sidebar from './SalesManager/Sidebar';
 import { FaDollarSign, FaFileInvoice, FaPlusCircle } from 'react-icons/fa';
 import './SalesManagement.css';
 

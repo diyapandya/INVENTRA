@@ -96,6 +96,7 @@ function Register() {
             >
               <option value="Inventory Manager">Inventory Manager</option>
               <option value="Sales Manager">Sales Manager</option>
+              <option value="Administrator">Administrator</option>
             </select>
           </div>
 

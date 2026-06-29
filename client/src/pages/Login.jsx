@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaWarehouse, FaSignInAlt } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import "./Login.css";
 
@@ -11,6 +11,7 @@ import "./Login.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("Inventory Manager");
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -25,7 +26,7 @@ function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, role }),
       });
 
       const data = await response.json();
@@ -82,6 +83,19 @@ function Login() {
               placeholder="••••••••"
             />
           </div>
+          <div className="form-group">
+            <label className="form-label">Role</label>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="form-select"
+              required
+            >
+              <option value="Inventory Manager">Inventory Manager</option>
+              <option value="Sales Manager">Sales Manager</option>
+              <option value="Administrator">Administrator</option>
+            </select>
+          </div>
 
           {error && <div className="form-error">{error}</div>}
 
@@ -92,10 +106,16 @@ function Login() {
 
         <div className="login-footer">
           <span>
+            Forgot your password?{" "}
+            <Link to="/forgot-password" className="login-link">
+              Reset it here
+            </Link>
+          </span>
+          <span>
             Don't have an account?{" "}
-            <a href="/register" className="login-link">
+            <Link to="/register" className="login-link">
               Register here
-            </a>
+            </Link>
           </span>
         </div>
       </div>
